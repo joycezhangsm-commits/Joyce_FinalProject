@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASCII Photobooth</title>
+
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #e6cfcf;
+}
+
+/* ===== TOP UI ===== */
+#topUI {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#counter {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#instruction {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== BUTTON ===== */
+#startBtn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  background: white;
+  cursor: pointer;
+}
+
+/* ===== MAIN LAYOUT ===== */
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* ===== CAMERA ===== */
+#canvas-holder canvas {
+  border: 4px solid black;
+  border-radius: 20px;
+}
+
+/* ===== SIDEBAR ===== */
+#sidebar {
+  width: 120px;
+  margin-left: 20px;
+}
+
+.preview {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ===== MACHINE STYLE ===== */
+#machine {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#pickupBtn {
+  border: 2px solid black;
+  width: 300px;
+  margin: 20px auto;
+  padding: 12px;
+  background: white;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP -->
+<div id="topUI">
+  <div id="counter">0/3</div>
+  <div id="instruction">Press start and pose for your photos</div>
+  <button id="startBtn">Start</button>
+</div>
+
+<!-- MAIN -->
+<div id="container">
+  <div id="canvas-holder"></div>
+  <div id="sidebar"></div>
+</div>
+
+<!-- MACHINE -->
+<div id="machine">
+  <div>PHOTOS DELIVERED HERE</div>
+  <button id="pickupBtn">Pick up →</button>
+</div>
+
+<script src="sketch.js"></script>
+
+</body>
+</html>
